@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard Control</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <h1>CANVA WHITEBOARD CONTROL</h1>
+</div>
+
+<div class="container">
+
+  <div class="card">
+
+    <label>Paste Canva Embed Link</label>
+
+    <textarea id="canvaLink" placeholder="Paste Canva Embed URL Here"></textarea>
+
+    <button id="loadBtn">Load Whiteboard</button>
+
+  </div>
+
+  <div class="card controls-grid">
+
+    <button onclick="prevSlide()">Previous Slide</button>
+
+    <button onclick="nextSlide()">Next Slide</button>
+
+    <button onclick="zoomIn()">Zoom In</button>
+
+    <button onclick="zoomOut()">Zoom Out</button>
+
+    <button onclick="toggleFullscreen()">Fullscreen</button>
+
+    <button onclick="clearBoard()">Clear</button>
+
+  </div>
+
+  <div class="card">
+
+    <h3>Viewer Link</h3>
+
+    <input type="text" id="viewerLink" readonly>
+
+  </div>
+
+</div>
+
+<div class="preview-wrapper">
+
+  <iframe id="canvaFrame" allowfullscreen></iframe>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
